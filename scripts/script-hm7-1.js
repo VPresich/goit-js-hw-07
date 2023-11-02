@@ -1,6 +1,7 @@
-// Напиши скрипт, який:
+// З використанням властивостей і методів DOM-елементів
+// напиши скрипт, який:
 
-// Порахує і виведе в консоль кількість категорій в ul#categories, 
+// Порахує і виведе в консоль кількість категорій в ul#categories,
 // тобто елементів li.item.
 // Для кожного элемента li.item у списку ul#categories,
 // знайде і виведе в консоль текст заголовку елемента (тегу <h2>)
@@ -11,18 +12,10 @@ const categoryItemsRef = categoriesRef.querySelectorAll(".item");
 
 console.log(`Number of categories: ${categoryItemsRef.length}`);
 
-categoryItemsRef.forEach(categoryItem => {
+categoryItemsRef.forEach((categoryItem) => {
   const categoryName = categoryItem.querySelector("h2").textContent;
   const categoryElements = categoryItem.querySelectorAll("li").length;
-  
+
   console.log(`Category: ${categoryName}`);
   console.log(`Elements: ${categoryElements}`);
 });
-
-
-
-
-
-
-
-

@@ -10,29 +10,16 @@
 
 Для генерування випадкового кольору використовуй функцію getRandomHexColor.
 */
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, "0")}`;
-}
+import getRandomHexColor from "./random-hex-color.js";
 
 const widget = document.querySelector(".widget");
 const changeColorBtn = widget.querySelector(".change-color");
 const colorSpan = widget.querySelector(".color");
 
-changeColorBtn.addEventListener("click", () => {
+changeColorBtn.addEventListener("click", onChangeColor);
+
+function onChangeColor() {
   const randomColor = getRandomHexColor();
-  document.querySelector('body').style.backgroundColor = randomColor;
+  document.querySelector("body").style.backgroundColor = randomColor;
   colorSpan.textContent = randomColor;
-});
-
-
-
-
-
-
-
-
-
-
+}

@@ -19,18 +19,17 @@
 Всі елементи повинні мати випадковий колір фону у форматі HEX. 
 Використовуй готову функцію getRandomHexColor для отримання кольору.
 */
+import getRandomHexColor from "./random-hex-color.js";
+
 const refs = {
-    inputNumber: document.querySelector('#input-number'),
-    createButton: document.querySelector('[data-create]'),
-    destroyButton: document.querySelector('[data-destroy]'),
-    boxesContainer: document.querySelector('#boxes')
-}
+  inputNumber: document.querySelector("#input-number"),
+  createButton: document.querySelector("[data-create]"),
+  destroyButton: document.querySelector("[data-destroy]"),
+  boxesContainer: document.querySelector("#boxes"),
+};
 
-refs.createButton.addEventListener('click', onCreateButtonClick);
-refs.destroyButton.addEventListener('click', onDestroyButtonClick);
-refs.createButton.classList.add('btn-styles');
-refs.destroyButton.classList.add('btn-styles');
-
+refs.createButton.addEventListener("click", onCreateButtonClick);
+refs.destroyButton.addEventListener("click", onDestroyButtonClick);
 
 function createBoxes(amount) {
   const baseSize = 30;
@@ -38,28 +37,23 @@ function createBoxes(amount) {
 
   for (let i = 0; i < amount; i++) {
     const size = baseSize + i * 10;
-    const divRef = document.createElement('div');
+    const divRef = document.createElement("div");
     divRef.style.width = `${size}px`;
     divRef.style.height = `${size}px`;
     divRef.style.backgroundColor = getRandomHexColor();
     fragment.appendChild(divRef);
   }
-    console.log(fragment);
-    refs.boxesContainer.appendChild(fragment);
-}
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+  refs.boxesContainer.appendChild(fragment);
 }
 
 function onCreateButtonClick() {
-    const amount = Number(refs.inputNumber.value);
-    console.log(amount);
+  const amount = Number(refs.inputNumber.value);
+  if (amount >= 1 && amount <= 100) {
     createBoxes(amount);
+  }
 }
 
 function onDestroyButtonClick() {
-  refs.boxesContainer.innerHTML = '';
+  refs.boxesContainer.innerHTML = "";
 }
