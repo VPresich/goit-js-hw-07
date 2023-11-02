@@ -11,8 +11,7 @@
 #controls {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: baseline;
+  align-items: flex-start;
   column-gap: 16px;
   padding: 32px;
   background-color: var(--item-bgr-color);
@@ -22,11 +21,10 @@
   width: 150px;
   height: 40px;
   text-align: center;
-
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04px;
-  border-radius: 8px;
+  border-radius: 8px;  
   border: 1px solid var(--border-normal-color);
   transition: border 500ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: transparent;
@@ -55,7 +53,6 @@
   border-radius: 8px;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 8px;
 }
 
 button[data-create] {
