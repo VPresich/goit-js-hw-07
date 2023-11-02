@@ -1,4 +1,4 @@
-.header-page {
+.header-page {  
   background-color: var(--section-bgr-color);
   border-bottom: 1px solid var(--border-normal-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -19,6 +19,7 @@
 
 .site-navigation-item-link {
   cursor: pointer;
+  color: var(--menu-color);
   text-decoration: none;
   display: block;
   padding-top: 24px;

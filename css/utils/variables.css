@@ -1,20 +1,10 @@
 :root {
-  /* Colors */
-  --slate: #434455; /*body text */
-  --iris: #4d5ae5; /* focused, active states, links */
-  --ocean: #404bbf; /* accent */
-  --navyblue: #2e2f42; /* shadows, headings*/
-  --lightslate: #8e8f99; /* helper text, deemphasized text */
-  --white: #ffffff; /* header, background, team card */
-  --cloud: #f4f4fd; /* light mode backgraund, light mode dialogs */
-  --cornflower: #e7e9fc; /* hairlines, accent collor */
-  --green: #31d0aa; /* valid fields, success messages*/
-  --dairy: #fcfcfc; /* modal background */
-
+  /* Colors */  
   --body-bgr-color: #f5f5f5;
   --body-color: #2e2f42;
 
   --menu-item-accent: #404bbf;
+  --menu-color: #434455; 
 
   --form-bgr-color: #ffffff;
   --item-bgr-color: #f6f6fe;
