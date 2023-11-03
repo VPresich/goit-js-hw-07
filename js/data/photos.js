@@ -1,3 +1,4 @@
+// Data for rendering
 const images = [
   {
     url: "./img/photo-1-1.jpg",

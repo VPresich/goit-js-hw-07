@@ -1,4 +1,4 @@
-// Экспорт данных
+// Data for rendering
 
 const images = [
   {
