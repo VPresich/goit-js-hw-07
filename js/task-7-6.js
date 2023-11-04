@@ -52,10 +52,10 @@ function onCreateButtonClick() {
   if (amount >= 1 && amount <= 100) {
     refs.boxesContainer.innerHTML = "";
     createBoxes(amount);
+    refs.inputNumber.value = "";
   }
 }
 
 function onDestroyButtonClick() {
   refs.boxesContainer.innerHTML = "";
-  refs.inputNumber.value = "";
 }
