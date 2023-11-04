@@ -50,10 +50,12 @@ function createBoxes(amount) {
 function onCreateButtonClick() {
   const amount = Number(refs.inputNumber.value);
   if (amount >= 1 && amount <= 100) {
+    refs.boxesContainer.innerHTML = "";
     createBoxes(amount);
   }
 }
 
 function onDestroyButtonClick() {
   refs.boxesContainer.innerHTML = "";
+  refs.inputNumber.value = "";
 }
